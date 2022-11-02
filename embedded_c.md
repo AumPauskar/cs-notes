@@ -5,15 +5,24 @@ Embedded C is used in embedded systems and iot deviced such as Arduino and mico 
 The following are the steps to run a code on Keil \
 Note: Here we are working on intel 8051AH microcontroller
 
-1. Install and run keil
-2. Open a new microvision project under the projects tab.
-3. Locate and save the folder in the desired place (with no extension).
-4. Create a new file with the extension `.c` and save the file.
-5. Open the startup file on the left hand side and select the add file option. Select the .c file you have created.
-6. Translate the file first and then build the file, both the options are available on the menubar.
-7. Select the debug option.
-8. Under the peripherals tab select the peripherals you require.
-9. Use either run or step one line function
+- Install and run keil
+If you are on a windows system you can run the exe file locally, if you are on a linux machine you can run keil through wine and it will function just like you are running it on windows natively. \
+- Open a new microvision project under the projects tab.
+Open projects first which is located in the menu bar. Click on open a new micro vision (uVision) project. \
+- Locate and save the folder in the desired place (with no extension).
+The prompt will ask you for a cocation where the project needs to be saved. It is always a great practice to always have a new project under a new folder, this makes sure that the project files remain persistant even after making modifications or making a completely new project. \
+- Create a new file with the extension `.c` and save the file.
+Afte completing all the steps given above, open a new wile by using ctrl+n and saving it first with the extension `.c`, use ctrl+s to save the file. \
+- Open the startup file on the left hand side and select the add file option. Select the .c file you have created.
+In order to execute the code that you have written, the software must include it in the environment. To do this first on the left system tray right click and then select `add existing files to group` and then double select your code base file. \
+- Translate the file first and then build the file, both the options are available on the menubar. \
+Translating the file changes the embedded c code to assembly level code, then build it to futher convert it into binary code.
+- Select the debug option.
+In the menubar select debug, the the debug menu select `start/stop debug session`. This will lead you upto a debug screen. In the debug screen you have to go to the `run` to run the code normally, or if you have to run/debug it line by line then go to the `step` button to run/debug it step by step.
+- Under the peripherals tab select the peripherals you require.
+Unlike other languages keil, the console does not support normal IO. You have to select a peripheral to go along with it.
+- Gain output
+The output can be traced by the peripheral pins to gain any digital form of output or use `analysis window` to analyse the function in the analog fasion.
 
 ## Tasks
 
