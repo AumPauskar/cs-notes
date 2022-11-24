@@ -69,7 +69,7 @@ This section contains the following
 ### Adding a hyperlink
 A hyperlink is a gateway to another website or can be a local file. A hyperlink can be enclosed withing a string of text, a button or an image. \
 In this example we have two files one is index.html and the another is child.html the hyperlink in the file is bidirectional. \
-* Contents of index.html
+- Contents of index.html
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +83,7 @@ In this example we have two files one is index.html and the another is child.htm
 </body>
 </html>
 ```
-* Contents of child.html
+- Contents of child.html
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +101,7 @@ In this example we have two files one is index.html and the another is child.htm
 There are two types of urls. Absolute urls and relative urls. Absolute urls give the complete location of the file but may change from system to system but using relative urls promises that the program will work on any system with the same OS. \
 This is an example of an external hyperlink where the link navigates to anoter file or webpage.
 
-* By using internal hyperlink
+- By using internal hyperlink
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -121,3 +121,94 @@ This is an example of an external hyperlink where the link navigates to anoter f
 </html>
 ```
 image maps
+background color, entire page, particular page, rgb and hex colors, alpha colors in html
+
+## Styling
+### Background color
+Background color can be added in html webpage by two ways, first directly using the html format and adding colour int the html document. The second way is to use a CSS document to stylize individual element.
+
+- Simple method
+```
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+- Using CSS \
+Contents of HTML document
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+Contents of CSS document
+```
+body {background-color: powderblue;}
+```
+### Customising the font
+The font can be customised in a lot of ways in html, that is the user can change the size, the weight and the type of font used
+
+- Using HTML \
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+	
+	<h1 "font-family:verdana;" style="font-size:300%;">This is a heading</h1>
+	<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+- Using CSS \
+Contents of html document
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+Contents of CSS file
+```
+body {
+	/* Changing the background color */
+	background-color: rgb(255, 255, 255);
+}
+h1 {
+	/* Changing the font size */
+	font-size: 5em;
+	/* Changing the font style */
+	font-style: oblique;
+	/* Changing the font family */
+	font-family: 'Courier New', Courier, monospace;
+	/* Changing the font weight */
+	font-weight: normal;
+}
+```
+A great practice in classifying the font type is to have multiple fonts. This makes sure that if any OS doesn't support the font that is asked to be rendered another placeholer font will replace it so the styling of the website is not inconsistant.
