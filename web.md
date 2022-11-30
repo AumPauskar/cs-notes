@@ -5,6 +5,9 @@
 - A web can be two tier, three tier, n tier having different applets for different purposes
 - HTML: Hypertext markup lang, CSS: Cascading stylesheet, JS: Javascript
 
+## Misc
+- &npsp: singlewhitespace
+
 ## Basics
 ### Structure of a HTML document
 A HTML document contents many tags called as elements. These elements are crutial in making a HTML document. This is the common structure of an HTML document.
@@ -66,6 +69,53 @@ This section contains the following
 </html>
 ```
 
+### Styling in another way
+There are two methods of using CSS in HTML 5. One method is to use a seperate CSS document that contents all the styling attributes, another method is to include a style tag and include all the styling attributes inside the styling tab.
+
+- Within HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		body {
+			background: #e71515;
+		}
+		h1 {
+			color: #ffffff;
+		}
+	</style>
+<head>
+	<title>Styling guide</title>
+</head>
+<body>
+	<h1>This is a document</h1>
+</body>
+</html>
+```
+
+- Using HTML and CSS \
+Contents of HTML document
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Styling guide</title>
+</head>
+<body>
+	<h1>This is a document</h1>
+</body>
+</html>
+```
+Contents of CSS document
+```
+body {
+	background: #e71515;
+}
+h1 {
+	color: #ffffff;
+}
+```
 ### Adding a hyperlink
 A hyperlink is a gateway to another website or can be a local file. A hyperlink can be enclosed withing a string of text, a button or an image. \
 In this example we have two files one is index.html and the another is child.html the hyperlink in the file is bidirectional. \
@@ -212,3 +262,76 @@ h1 {
 }
 ```
 A great practice in classifying the font type is to have multiple fonts. This makes sure that if any OS doesn't support the font that is asked to be rendered another placeholer font will replace it so the styling of the website is not inconsistant.
+
+## Creating a table
+There are three keywords in creating a table\
+1. table - keyword for initiating a table
+2. tr - creates a table row
+3. th - creates a table heading
+4. td - inserts new table data
+
+Syntax of creating a table
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+	<!-- Initiating the table -->
+	<table>
+		<!-- Creates a table row -->
+		<tr>
+			<!-- Creates a table heading -->
+			<th>Srno</th>
+			<th>Name</th>
+			<th>Qty</th>
+		</tr>
+		<tr>
+			<!-- Inserta table data -->
+			<td>1. </td>
+			<td>Bruh</td>
+			<td>69</td>
+		</tr>
+	</table>
+</body>
+</html>
+```
+Attributes can be modified within a table either using the prebuilt functions in HTML or in CSS.
+- In HTML
+```
+...
+<body>
+	<table width="100%" cellspacing = "10" cellpadding = "10">
+		<tr>
+...
+```
+
+Other properties of tables can be changed with style attributes under the table tag. Some operations can be found [here](https://www.w3schools.com/html/html_table_sizes.asp).
+
+## Images
+Images can be created inside html with the img tag, the image can either be hosted locally or globally depending on the requirements. The syntax of inserting an image is as follows.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Sussy baka</h1>
+  <!-- Image 1 inserted -->
+  <img src="tmp.jpg" alt="Sus">
+  <h1>Waltuh</h1>
+  <!-- Image 2 inserted -->
+  <img src="waltuh.jpeg" alt="Waltuh">
+</body>
+
+</html>
+```
+Folder contents
+1. index.html
+2. tmp.jpg
+3. waltuh.jpeg
