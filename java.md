@@ -437,6 +437,11 @@ Here is the syntax on how to catch errors
 
 // error catching to be written
 
+## Garbage collection
+Unlike the OG of high level programming language like C or C++ java is equipped with a much more advanced automated garbage collecion which removes unwanted java variables when not in use.
+
+## String comparision
+The string compare method can be used to compare two given strings, when both the strings are same the inbuilt function returns a 0 with a -ve or +ve number being returned if the two strings are not matching.
 ## Termworks
 
 1. Termwork 1 - Program on 2D arrays
@@ -514,3 +519,4 @@ For student5
 Marks: 18
 Average: 9
 ```
+
