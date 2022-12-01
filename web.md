@@ -4,6 +4,7 @@
 - CSA: Client server architecture
 - A web can be two tier, three tier, n tier having different applets for different purposes
 - HTML: Hypertext markup lang, CSS: Cascading stylesheet, JS: Javascript
+- P2P: Peer to peer architecture
 
 ## Misc
 - &npsp: singlewhitespace
@@ -317,16 +318,16 @@ Images can be created inside html with the img tag, the image can either be host
 <html lang="en">
 
 <head>
-  <title>Document</title>
+	<title>Document</title>
 </head>
 
 <body>
-  <h1>Sussy baka</h1>
-  <!-- Image 1 inserted -->
-  <img src="tmp.jpg" alt="Sus">
-  <h1>Waltuh</h1>
-  <!-- Image 2 inserted -->
-  <img src="waltuh.jpeg" alt="Waltuh">
+	<h1>Sussy baka</h1>
+	<!-- Image 1 inserted -->
+	<img src="tmp.jpg" alt="Sus">
+	<h1>Waltuh</h1>
+	<!-- Image 2 inserted -->
+	<img src="waltuh.jpeg" alt="Waltuh">
 </body>
 
 </html>
@@ -335,3 +336,145 @@ Folder contents
 1. index.html
 2. tmp.jpg
 3. waltuh.jpeg
+
+## Forms in HTML
+Forms can be used to recieve data from the user and into the erver to perform various operations on the web, they can be used with the following syntax
+
+### Text input
+A text field can be used to gather alphanumeric input from the user
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+	<label for="name">Enter name:</label><br>
+	<input type="text" id="name" name="roll" value="gp"><br>
+	<label for="roll">Last name:</label><br>
+	<input type="text" id="roll" name="roll" value="33"><br><br>
+	<input type="reset" value="Reset"><br>
+	<input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the page willl break</p>
+
+</body>
+</html>
+```
+
+- Multiline text input
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Multiple</h2>
+<p>Enter the adress</p>
+
+<form action="child1.html">
+	<textarea name="message" rows="10" cols="30">The Ghar</textarea>
+	<br><br>
+	<input type="submit">
+</form>
+
+</body>
+</html>
+```
+### Radio buttons
+A radio button only has a fixed input and the user can only select one input at once
+```
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Radio Buttons</h2>
+<p>Is esteban ocon an asshole?</p>
+<form>
+	<input type="radio" id="yes" name="ocon" value="yes">
+	<label for="yes">Yes</label><br>
+	<input type="radio" id="no" name="ocon" value="no">
+	<label for="no">No</label><br>
+</form> 
+</body>
+</html>
+```
+Note that the names of the option should be same otherwise it becomes a multi way selection rather than a single way selection.
+
+### Checkboxes
+A checkbox option is similar to the radio button but has the option of choosing multipe options
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>Sunday</h2>
+	<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+	<form action="/file.php">
+		<!-- useage of target attribute -->
+		<input type="checkbox" id="pole" name="v1" value="Pole" target="parent">
+		<label for="pole"><a href="https://www.f1.com/">Pole position</a></label><br>
+		<input type="checkbox" id="win" name="v2" value="Win">
+		<label for="win"><a href="https://www.f1.com/">Race win</a></label><br>
+		<input type="checkbox" id="flap" name="v3" value="Fastest Lap">
+		<label for="flap"><a href="https://www.f1.com/">Fastest lap</a></label><br><br>
+		<input type="submit" value="Submit">
+	</form> 
+
+</body>
+</html>
+```
+Other methods can be checked [here](https://www.w3schools.com/html/html_forms.asp)
+
+- Note: The target tag can be specified to show how the file should be opened, if the target is specified in as the parent window then the hyperlink, or the submit window will open in the same window, if the target is not specified then it will opem in a new tag.
+
+The following tags can be used at the end of the tag to perform certaing applicaitons
+1. Autocomplete tag: autocomplete="on"
+2. Novalidate: novalidate
+The get and the set method can be found [here](https://www.w3schools.com/html/html_forms_attributes.asp)
+
+### Dropdown list
+The dropdown list is similar to the radio in the sense that the user can select only one of the options
+```
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>Choose a car</h2>
+	<label for="cars">Select one</label>
+	<!-- Size and multiple being used -->
+	<select id="cars" name="cars" size="3" multiple>
+	  <option value="mer">Mercedes</option>
+	  <!-- Ferrari being the default option -->
+	  <option value="fer">Ferrari</option>
+	  <option value="rbr">Red Bull</option>
+	  <option value="alp">Alpine</option>
+	  <option value="mcl">McLaren</option>
+	  <option value="amr">Aston Martin</option>
+	  <option value="haa">Haas</option>
+	  <option value="alt">Alpha Tauri</option>
+	  <option value="alr">Alfa Romeo</option>
+	  <option value="wil">Williams</option>
+
+	</select>
+
+</body>
+</html>
+```
+1. Size gives the program a more broader width
+2. Multiple allows the user to select multiple options with a ctrl+click action
+
+### Buttons
+Buttons make the website dynamic with the use of javascript libraries
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The button Element</h2>
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+</body>
+</html>
+```
