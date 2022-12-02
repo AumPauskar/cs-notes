@@ -12,59 +12,80 @@
 			<fieldset>
 			<legend>Enter the form</legend>
 			<!-- Normal labe for name, email -->
-			<label for="name">Enter your name:</label><br>
-			<input type="text" id="name" name="name" value=""><br>
-			<label for="email">Enter your email:</label><br>
-			<input type="email" id="email" name="email" value=""><br><br>
+			<!-- Initiating the table -->
+			<table>
+				<tr>
+					<th><label for="name">Enter your name:</label></th>
+					<th><input type="text" id="name" name="name" value=""></th>
+				</tr>
+				<tr>
+					<th><label for="email">Enter your email:</label></th>
+					<th><input type="email" id="email" name="email" value=""></th>
+				</tr>
+				<tr>
+					<th><label for="pwd">Enter your password:</label></th>
+					<th><input type="password" id="pwd" name="pwd"></th>
+				</tr>
+				<tr>
+					<th><label for="male">Male</label></th>
+					<th><input type="radio" id="male" name="gender" value="male"></th>
+				</tr>
+				<tr>
+					<th><label for="yes">Female</label></th>
+					<th><input type="radio" id="male" name="gender" value="male"></th>
+				</tr>
+				<tr>
+					<th><label for="nonbinary">Non binary</label></th>
+					<th><input type="radio" id="nonbinary" name="gender" value="nonbinary"></th>
+				</tr>
+				<tr>
+					<th><label for="address">Enter your address</label></th>
+					<th><textarea name="address" rows="10" cols="30"></textarea></th>
+				</tr>
+				<tr>
+					<th><label for="hobbies">Enter your hobbies</label></th>
+				</tr>
+				<tr>
+					<th><label for="hobby1">Hobby 1</label></th>
+					<th><input type="checkbox" id="hobby1" name="v1" value="Hobby2" target="parent"></th>
+				</tr>
+				<tr>
+					<th><label for="hobby2">Hobby 2</label></th>
+					<th><input type="checkbox" id="hobby2" name="v1" value="Hobby3" target="parent"></th>
+				</tr>
+				<tr>
+					<th><label for="hobby3">Hobby 3</label></th>
+					<th><input type="checkbox" id="hobby3" name="v1" value="Hobby3" target="parent"></th>
+				</tr>
+				<tr>
+					<th><label for="college">Enter your college</label></th>
+					<th><input type="text" id="college" name="college" value=""></th>
+				</tr>
+				<tr>
+					<th><label for="photos">Upload your photo</label></th>
+					<th><input type="file" id="myFile" name="filename"></th>
+				</tr>
+				<tr>
+					<th><label for="cars">Select your branch</label></th>
+					<th><select id="cars" name="cars">
+						<option value="cse">CSE</option>
+						<option value="ise">ISE</option>
+						<option value="ece">ECE</option>
+						<option value="eee">EEE</option>
+						<option value="mec">MEC</option>
+						<option value="civ">CIV</option>
+					</select></th>
+				</tr>
+				<tr>
+					<th><input type="reset" value="Reset"></th>
+					<th><input type="submit" value="Submit"></th>
+				</tr>
+			</table>
 
-			<!-- Tag with the password attribute -->
-			<label for="pwd">Enter your password:</label><br>
-			<input type="password" id="pwd" name="pwd"><br><br>
-
-			<!-- Radio buttons for gender -->
-			<input type="radio" id="male" name="gender" value="male">
-			<label for="male">Male</label><br>
-
-			<input type="radio" id="male" name="gender" value="male">
-			<label for="yes">Female</label><br>
-
-			<input type="radio" id="nonbinary" name="gender" value="nonbinary">
-			<label for="nonbinary">Non binary</label><br><br>
-
-			<!-- Multiline box for address -->
-			<label for="address">Enter your address</label><br>
-			<textarea name="address" rows="10" cols="30"></textarea><br><br>
-
-			<!-- Multiline box for hobbies -->
-			<label for="hobbies">Enter your hobbies</label><br>
-			<input type="checkbox" id="hobby1" name="v1" value="Hobby1" target="parent">
-			<label for="hobby1">Hobby 1</label><br>
-			<input type="checkbox" id="hobby2" name="v1" value="Hobby2" target="parent">
-			<label for="hobby2">Hobby 2</label><br>
-			<input type="checkbox" id="hobby3" name="v1" value="Hobby3" target="parent">
-			<label for="hobby3">Hobby 3</label><br><br>
-
-			<!-- Single line for college -->
-			<label for="college">Enter your college</label><br>
-			<input type="text" id="college" name="college" value=""><br><br>
-			
-			<!-- Upload of photos -->
-			<label for="photos">Upload your photo</label><br>
-			<input type="file" id="myFile" name="filename">
-			<br><br>
 			<!-- Dropdown for department -->
-			<label for="cars">Select your branch</label><br>
-			<select id="cars" name="cars">
-				<option value="cse">CSE</option>
-				<option value="ise">ISE</option>
-				<option value="ece">ECE</option>
-				<option value="eee">EEE</option>
-				<option value="mec">MEC</option>
-				<option value="civ">CIV</option>
-			</select><br><br>
-			<!-- Reset and submit button -->
-			<input type="reset" value="Reset"><br>
-			<input type="submit" value="Submit">
+
+
+			<br><br>
 		</fieldset>
 	</form> 
 </body>
