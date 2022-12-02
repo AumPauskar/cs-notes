@@ -520,3 +520,41 @@ Marks: 18
 Average: 9
 ```
 
+## Working with classes
+Working with classes or as its commonly known as object oriented programming is a method of programming where the program is built with classes which are just charecterisation of a much more complex data type with the inclusion of functions.
+
+Things to know before attempting OOPS in Java
+1. Only the main function should contain th public attribute
+2. The package must be defined for inclusion of more than one class (including the main)
+
+What are we going to do? \
+Here we have made a folder called `test` which contains a java file `jarjar.java`, hence in order to achive the output install Java 1.17 + make the same folder structure.
+
+### Basics of class
+```
+// a package of the foldername should be used
+package test;
+
+// child class should not have public attribute
+class vehicle {
+	// class members
+	int cyl;
+	String name;
+	
+}
+
+// parent/main class must have the public attribute
+public class jarjar {
+
+	public static void main(String[] args) {
+		// creating a new object
+		vehicle car1 = new vehicle();
+		// accessing class members
+		car1.cyl = 5;
+		car1.name = "Kuruma";
+		System.out.println(car1.cyl);
+		System.out.println(car1.name);
+	}
+}
+```
+### A slightly complex class
