@@ -1,13 +1,3 @@
-# Data structures and algorithms
-
-## The big O notation
-The big O notation is a wat to find the scalablity and useablity of a particular program on a large scale. The 
-
-## Data structures
-
-### Stacks
-Stacks is a datastructure which works on the principle of FILO (first in last out), with an extra element only being added when at one end of the array. It has one extra index value which refers to the top index of the array.
-```
 // program to implement stack in c
 #include <stdio.h>
 
@@ -80,7 +70,3 @@ int main() {
 		}
 	}
 }
-```
-
-### Queues
-Queue is a multiway stack with the FIFO algorithm (first in first out), it consists of two index pointers with one being the first element pointer  and ther other being at the rear of the element. 
