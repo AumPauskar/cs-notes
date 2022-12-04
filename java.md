@@ -190,6 +190,8 @@ public class test {
 		System.out.print("Enter num 2: ");
 		int num2 = scanObj.nextInt();
 		System.out.println("The sum is: " + (num1+num2));
+		// extra
+		scanObj.close();
 	}
 }
 ```
@@ -199,6 +201,7 @@ Enter num 1: 4
 Enter num 2: 5
 The sum is: 9
 ```
+Its always a good practice to close the scanner object in this case it was `scanObj` using the scanObj.close() method.
 ### Comments
 
 ```
@@ -373,6 +376,25 @@ Output
 1,2,3,4,5,6,7,8,9,10,%
 ```
 
+### For each loop
+Now this is not a complety distinctive style of loop fowever its just an extension of a standard for loop. For each loop cycles through an array till the array gets completed.
+```
+package test;
+
+public class jarjar {
+
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6,7,8,9,0};
+		for (int i : arr) {
+			System.out.print(i);
+		}
+	}
+}
+```
+Output
+```
+1234567890%
+```
 ### Break statements
 A break statement can also be initialised within a loop to exit a loop whenever a condition is met.
 ```
@@ -431,6 +453,87 @@ Output
 9
 11
 ```
+
+## Datatypes
+
+### Arrays
+A array is a one dimentional complex data type which can store one type of data inside it. In Java the arrays are stored as an object and should be used with object functions to interact.
+Given below is a program of how to scan and print two arrays. Note that none of the packages are required to interact with the array, however these are requited to do system input and printing the array. The individual elements can be accessed with the array indexing starting from 0 to the last-1 element of the array.
+
+```
+package test;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class jarjar {
+
+	public static void main(String[] args) {
+		// declaring an array
+		int[] arr = new int[10];
+		// declaring and defining the array
+		int[] arr2 = {1,2,3,4,5,6,7,8,9,10};
+		System.out.println(Arrays.toString(arr2));
+		Scanner in = new Scanner(System.in);
+		for (int i = 0; i < 10; i++) {
+			arr[i] = in.nextInt();
+		}
+		in.close();
+		System.out.println(Arrays.toString(arr));
+
+	}
+}
+```
+Output
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+0 9 8 7 6 5 4 3 2 1 
+[0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+### Multidimentional array
+Multidimentional array are similar to the linear array the only difference being its an array inside another array, since its just a compound array all the features of the regalar array functions are applicable here also.
+```
+package test;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class jarjar {
+
+	public static void main(String[] args) {
+		int i;
+		int[][] arr2D = new int[3][3];
+		Scanner in = new Scanner(System.in);
+		for (i=0; i<3; i++) {
+			for (int j=0; j<3; j++) {
+				System.out.print("Enter value ["+i+"]["+j+"] :");
+				arr2D[i][j] = in.nextInt();
+			}
+		}
+		in.close();
+		for (i=0; i<3; i++) {
+			System.out.println(Arrays.toString(arr2D[i]));
+		}
+	}
+}
+```
+Output
+```
+Enter value [0][0] :1
+Enter value [0][1] :2
+Enter value [0][2] :3
+Enter value [1][0] :4
+Enter value [1][1] :5
+Enter value [1][2] :6
+Enter value [2][0] :7
+Enter value [2][1] :8
+Enter value [2][2] :9
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+```
+
+### Misc functions in the array
+1. length - the arrayName.length function returns an integer value of the array length whenever its called
 ## Error handling
 If an error is occuring inside the program and the programmer wants the error to be handled gracefully error handling must be implementd. To do this a try-catch method is used. \
 Here is the syntax on how to catch errors
@@ -442,6 +545,84 @@ Unlike the OG of high level programming language like C or C++ java is equipped 
 
 ## String comparision
 The string compare method can be used to compare two given strings, when both the strings are same the inbuilt function returns a 0 with a -ve or +ve number being returned if the two strings are not matching.
+
+
+## Working with classes
+Working with classes or as its commonly known as object oriented programming is a method of programming where the program is built with classes which are just charecterisation of a much more complex data type with the inclusion of functions.
+
+Things to know before attempting OOPS in Java
+1. Only the main function should contain th public attribute
+2. The package must be defined for inclusion of more than one class (including the main)
+
+What are we going to do? \
+Here we have made a folder called `test` which contains a java file `jarjar.java`, hence in order to achive the output install Java 1.17 + make the same folder structure.
+
+### Basics of class
+```
+// a package of the foldername should be used
+package test;
+
+// child class should not have public attribute
+class vehicle {
+	// class members
+	int cyl;
+	String name;
+	
+}
+
+// parent/main class must have the public attribute
+public class jarjar {
+
+	public static void main(String[] args) {
+		// creating a new object
+		vehicle car1 = new vehicle();
+		// accessing class members
+		car1.cyl = 5;
+		car1.name = "Kuruma";
+		System.out.println(car1.cyl);
+		System.out.println(car1.name);
+	}
+}
+```
+### Constructors
+```
+package test;
+
+class Vehicle {
+	int cyl;
+	double bore;
+	double stroke;
+	int power;
+	String engineType;
+
+	// an example of a paramatrised constructor
+	// this can be used to direct the variable
+	Vehicle (int var) {
+		this.power = var;
+	}
+	double giveDisplacement() {
+		return cyl*bore*stroke;
+	}
+	
+}
+
+public class jarjar {
+
+	public static void main(String[] args) {
+		// creating a new object
+		Vehicle car1 = new Vehicle(420);
+		// accessing class members
+		car1.cyl = 5;
+		car1.engineType = "V6";
+		System.out.println(car1.cyl);
+		System.out.println(car1.power);
+		System.out.println(car1.engineType);
+	}
+}
+```
+
+Note: The `this` keyword can be used to direct the variable in the current class scope and not be declared globally.
+
 ## Termworks
 
 1. Termwork 1 - Program on 2D arrays
@@ -519,42 +700,3 @@ For student5
 Marks: 18
 Average: 9
 ```
-
-## Working with classes
-Working with classes or as its commonly known as object oriented programming is a method of programming where the program is built with classes which are just charecterisation of a much more complex data type with the inclusion of functions.
-
-Things to know before attempting OOPS in Java
-1. Only the main function should contain th public attribute
-2. The package must be defined for inclusion of more than one class (including the main)
-
-What are we going to do? \
-Here we have made a folder called `test` which contains a java file `jarjar.java`, hence in order to achive the output install Java 1.17 + make the same folder structure.
-
-### Basics of class
-```
-// a package of the foldername should be used
-package test;
-
-// child class should not have public attribute
-class vehicle {
-	// class members
-	int cyl;
-	String name;
-	
-}
-
-// parent/main class must have the public attribute
-public class jarjar {
-
-	public static void main(String[] args) {
-		// creating a new object
-		vehicle car1 = new vehicle();
-		// accessing class members
-		car1.cyl = 5;
-		car1.name = "Kuruma";
-		System.out.println(car1.cyl);
-		System.out.println(car1.name);
-	}
-}
-```
-### A slightly complex class

@@ -19,6 +19,7 @@ public class tw1 {
 				total[i] = total[i] + marks[i][j];
 			}
 		}
+		in.close();
 
 		for (int i=0; i<5; i++) {
 			avg[i] = compute_avg(marks[i][0], marks[i][1], marks[i][2]);
