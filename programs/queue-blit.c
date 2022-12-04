@@ -16,7 +16,7 @@
 #define MAX 16
 // global variables
 int queue[MAX];
-int front = -1, rear = -1;
+int front = 0, rear = -1;
 void blit();
 
 // enqueue funtion
@@ -41,7 +41,7 @@ void dequeue()
 	// queue empty condition
 	// if front > rear OR
 	// 					front and rear is -1
-	if ((front > rear) || ((front == -1) && (rear == -1)))
+	if (rear < 0)
 	{
 		printf("Queue empty\n");
 	}
@@ -49,8 +49,8 @@ void dequeue()
 	{
 		int tmp = queue[front]; // tmp variable for display
 		// adds one to the front index then resets the element
-		front++;
 		queue[front] = 0;
+		rear--;
 		printf("Element %d deleted from the queue\n", tmp);
 		blit();
 	}
@@ -69,7 +69,7 @@ void display()
 {
 	printf("[ ");
 	// runs a for loop from front to rear index
-	for (int i = front+1; i < rear+1; i++)
+	for (int i = front; i < rear+1; i++)
 		printf("%d ", queue[i]);
 	printf("]\n");
 	
