@@ -17,6 +17,7 @@
 // global variables
 int queue[MAX];
 int front = -1, rear = -1;
+void blit();
 
 // enqueue funtion
 void enqueue(int element)
@@ -51,6 +52,7 @@ void dequeue()
 		front++;
 		queue[front] = 0;
 		printf("Element %d deleted from the queue\n", tmp);
+		blit();
 	}
 }
 
@@ -72,6 +74,26 @@ void display()
 	printf("]\n");
 	
 }
+
+void displayFull()
+{
+	printf("[ ");
+	// runs a for loop from front to rear index
+	for (int i = 0; i < MAX; i++)
+		printf("%d ", queue[i]);
+	printf("]\n");
+}
+
+void blit()
+{
+	for (int i = 0; i<MAX; i++)
+	{
+		if (i > 0)
+		{
+			queue[i-1] = queue[i];
+		}
+	}
+}
 int main(int argc, char const *argv[])
 {
 	int lever = 1; // lever variable for while loop
@@ -87,8 +109,9 @@ int main(int argc, char const *argv[])
 			// choices
 			// 0 -> help     1 -> enqueue
 			// 2 -> dequeue  3 -> peek
-			// 4 -> display  5 -> exit
-			printf("0: Help\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Display\n5. Exit\n\n");
+			// 4 -> display  5 -> full display
+			// 6 -> exit
+			printf("0. Help\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Display\n5. Full display\n6. Exit\n\n");
 			break;
 		case 1:
 			printf("Enter the element to be enqueued: ");
@@ -107,6 +130,9 @@ int main(int argc, char const *argv[])
 			display();
 			break;
 		case 5:
+			displayFull();
+			break;
+		case 6:
 			lever = 0; // while loop variable (reset)
 			break;
 		default:
