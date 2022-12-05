@@ -73,7 +73,7 @@ This section contains the following
 ### Styling in another way
 There are two methods of using CSS in HTML 5. One method is to use a seperate CSS document that contents all the styling attributes, another method is to include a style tag and include all the styling attributes inside the styling tab.
 
-- Within HTML
+- Within HTML (head section)
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +94,7 @@ There are two methods of using CSS in HTML 5. One method is to use a seperate CS
 </html>
 ```
 
-- Using HTML and CSS \
+- Using HTML and CSS (external way)\
 Contents of HTML document
 ```
 <!DOCTYPE html>
@@ -117,6 +117,22 @@ h1 {
 	color: #ffffff;
 }
 ```
+
+- Inline use of stylesheets
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Styling guide</title>
+</head>
+<body style="background: #e71515">
+	<h1 style="color: #ffffff">This is a document</h1>
+</body>
+</html>
+```
+
+- Conflict resoultion in web page \
+Whenever there are multiple styling arguments in a html document the html always seeks for element level styling in the beginning heading styles as the intermediate amd external styling in the end.
 ### Adding a hyperlink
 A hyperlink is a gateway to another website or can be a local file. A hyperlink can be enclosed withing a string of text, a button or an image. \
 In this example we have two files one is index.html and the another is child.html the hyperlink in the file is bidirectional. \
@@ -263,6 +279,10 @@ h1 {
 }
 ```
 A great practice in classifying the font type is to have multiple fonts. This makes sure that if any OS doesn't support the font that is asked to be rendered another placeholer font will replace it so the styling of the website is not inconsistant.
+
+### Styling basics 
+- Box model \
+The whole webpage is divided into padding, border and margin with the margin being the differentialtor between the current element and the end of the current element. The Border being the end of the space between padding and margin and the padding is the void between the content and the border.
 
 ## Creating a table
 There are three keywords in creating a table\
