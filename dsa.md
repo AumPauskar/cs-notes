@@ -205,3 +205,5 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+
+- Using a queue with two stacks	
