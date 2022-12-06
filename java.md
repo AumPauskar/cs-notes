@@ -620,9 +620,269 @@ public class jarjar {
 	}
 }
 ```
-
+Output
+```
+4005.0
+37
+```
 Note: The `this` keyword can be used to direct the variable in the current class scope and not be declared globally.
 
+### Passing objects as parameters
+The following code demonstrated how passing of objects as parameters works, the code also shows how method overloading/function overloading/constructor overloading. 
+```
+package test;
+
+
+/**
+ * v8
+ */
+class v8 {
+	String engine = "v8";
+	int cyl = 8;
+	int power = 400;
+	double volume = 5.0;
+
+	v8(int power, float volume) {
+		this.power = power;
+		this.volume = volume;
+		System.out.println(power + "" + volume);
+	}
+
+	v8() {
+		this.power = 400;
+		this.volume = 5.0;
+		System.out.println(power + "" + volume);
+	}
+
+	// recieved said argument 
+	void powerPerCyl(int power, v8 object) {
+		int output = power / object.cyl;
+		System.out.println(output);
+	}
+	
+}
+public class jarjar {
+	public static void main(String[] args) {
+		v8 engine1 = new v8();
+		// passed argemnt as an object
+		engine1.powerPerCyl(300, engine1);
+	}
+}
+```
+
+### Static methods
+Static methods are called independent of the object and make a standalone function. 
+```
+package test;
+
+class v8 {
+	String engine = "v8";
+	int cyl = 8;
+	int power = 400;
+	double volume = 5.0;
+
+
+	// recieved said argument 
+	static double powerPerCyl(int power, int cyl) {
+		double output = power / cyl;
+		return output;
+	}
+	
+}
+public class jarjar {
+	public static void main(String[] args) {
+		System.out.println(v8.powerPerCyl(420, 8));
+	}
+}
+```
+Output
+```
+52.0
+```
+
+### Inheritance
+Inheritance in programming languages refers to getting all the properties of the parent function plus some more extras
+```
+package test;
+
+class v8 {
+	String engine = "v8";
+	int cyl = 8;
+	int power = 400;
+	double volume = 5.0;
+
+	double powerPerCyl(int power, int cyl) {
+		double output = power / cyl;
+		return output;
+	}	
+}
+
+// F1 engine	-> v8
+// child class	-> parent class
+class F1Engine extends v8 {
+	int rpm = 18000;
+	int angle = 90;
+
+	void printVol() {
+		System.out.println(rpm + " " + angle + " " + power);
+	}
+}
+public class jarjar {
+	public static void main(String[] args) {
+		v8 eng1 = new v8();
+		F1Engine eng2 = new F1Engine();
+
+		System.out.println(eng1.power);
+		eng2.printVol();
+	}
+}
+```
+Output
+```
+400
+18000 90 400
+```
+
+### Super builtin function
+The super function calls the parent class constructor from the child class. The super function must always lie before any other statements in the child class constructor.
+
+- Super to access constructor
+```
+package test;
+
+class v8 {
+	String engine = "v8";
+	int cyl = 8;
+	int power = 400;
+	double volume = 5.0;
+
+	v8() {
+		System.out.println(engine + " " + cyl + " " + power + " " + volume);
+	}
+
+	double powerPerCyl(int power, int cyl) {
+		double output = power / cyl;
+		return output;
+	}	
+}
+
+class F1Engine extends v8 {
+	int rpm = 18000;
+	int angle = 90;
+
+	void printVol() {
+		System.out.println(rpm + " " + angle + " " + power);
+	}
+
+	F1Engine() {
+		// super must always be the first statement
+		super();
+		System.out.println(rpm + " " + angle);
+		// calling the super class
+	}
+}
+public class jarjar {
+	public static void main(String[] args) {
+		v8 eng1 = new v8();
+		F1Engine eng2 = new F1Engine();
+
+		System.out.println(eng1.power);
+		eng2.printVol();
+	}
+}
+```
+Output
+```
+v8 8 400 5.0
+v8 8 400 5.0
+18000 90
+400
+18000 90 400
+```
+
+- Super in acessing values of parent class
+```
+package test;
+
+class v8 {
+	String engine = "v8";
+	int cyl = 8;
+	int power = 400;
+	double volume = 5.0;
+
+	double powerPerCyl(int power, int cyl) {
+		double output = power / cyl;
+		return output;
+	}	
+}
+
+class F1Engine extends v8 {
+	int rpm = 18000;
+	int angle = 90;
+	int power = 750;
+
+	F1Engine() {
+		System.out.println("Power in regular v8: " + super.power);
+		System.out.println("Power in F1 v8: " + power);
+	}
+}
+public class jarjar {
+	public static void main(String[] args) {
+		F1Engine eng2 = new F1Engine();
+
+	}
+}
+```
+Output
+```
+Power in regular v8: 400
+Power in F1 v8: 750
+```
+### Abstract classes
+
+1. An abstract class must be declared with an abstract keyword.
+2. It can have abstract and non-abstract methods.
+3. It cannot be instantiated.
+4. It can have constructors and static methods also.
+5. It can have final methods which will force the subclass not to change the body of the method. \
+An abstract class is a subset of normal classes where only the bare minimum is implemented.
+
+```
+package test;
+
+abstract class v8 {
+	String engine;
+	int cyl;
+	int power;
+	double volume;
+	double powerPerCyl(int power, int cyl) {
+		double output = power / cyl;
+		return output;
+	}	
+}
+
+class F1Engine extends v8 {
+	int rpm = 18000;
+	int angle = 90;
+	int power = 750;
+
+	F1Engine() {
+		System.out.println("Power in regular v8: " + super.power);
+		System.out.println("Power in F1 v8: " + power);
+	}
+}
+public class jarjar {
+	public static void main(String[] args) {
+		F1Engine eng2 = new F1Engine();
+
+	}
+}
+```
+Output
+```
+Power in regular v8: 0
+Power in F1 v8: 750
+```
 ## Termworks
 
 1. Termwork 1 - Program on 2D arrays
