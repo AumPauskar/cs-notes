@@ -5,6 +5,8 @@
 - A web can be two tier, three tier, n tier having different applets for different purposes
 - HTML: Hypertext markup lang, CSS: Cascading stylesheet, JS: Javascript
 - P2P: Peer to peer architecture
+- DOM: Document Object Model (DOM) is a file model wherein all the files are shown in a multiinterface structural model
+- Tree stucture: A tree structure is a model where the start point is a single node but as we go down the model the number of nodess increase just like a tree.
 
 ## Misc
 - &npsp: singlewhitespace
@@ -191,6 +193,12 @@ image maps
 background color, entire page, particular page, rgb and hex colors, alpha colors in html
 
 ## Styling
+
+### Comments
+CSS supports c style block comments
+```
+/* this is a comment */
+```
 ### Background color
 Background color can be added in html webpage by two ways, first directly using the html format and adding colour int the html document. The second way is to use a CSS document to stylize individual element.
 
@@ -198,7 +206,8 @@ Background color can be added in html webpage by two ways, first directly using 
 ```
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
+<!-- opacity also set -->
+<body style="background-color:powderblue; opacity: 30%">
 
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
@@ -225,6 +234,90 @@ Contents of HTML document
 Contents of CSS document
 ```
 body {background-color: powderblue;}
+```
+
+### The div tag
+The div tag cann be used in html and css to define the space in between.
+```
+<!DOCTYPE html>
+<html>
+<style>
+	h1 {
+	background-color: orange;
+	}
+
+	div {
+	background-color: blue;
+	}
+
+	p {
+	background-color: green;
+	}
+</style>
+<body>
+	
+<div>
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+</div>
+</body>
+</html>
+```
+
+### Background image
+
+- Adding background image from url
+```
+<style>
+	body {
+		background-image: url("https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000");
+	}
+</style>
+```
+
+Other background tags can be found [here](https://www.w3schools.com/css/css_background.asp)
+
+### Border
+Border can be formed with these attributes
+```
+<!DOCTYPE html>
+<html>
+<style>
+	p.mix {
+		/* Change of border style and thickness */
+		border-style: dotted dashed double;
+		border-width: thick;
+	}
+</style>
+<body>
+	
+<div>
+<h1>This is a heading</h1><br>
+<p class="mix">This is a paragraph.</p>
+</div>
+</body>
+</html>
+```
+Other border attributes can be found [here](https://www.w3schools.com/css/css_border.asp) \
+Border always happens from **top right bottom left**. \
+Shorthand notation can be used in the following way.
+```
+<!DOCTYPE html>
+<html>
+<style>
+	p.mix {
+		/* shorthand notation in action */
+		border: solid blue 10px;
+	}
+</style>
+<body>
+	
+<div>
+<h1>This is a heading</h1><br>
+<p class="mix">This is a paragraph.</p>
+</div>
+</body>
+</html>
 ```
 ### Customising the font
 The font can be customised in a lot of ways in html, that is the user can change the size, the weight and the type of font used
@@ -267,6 +360,7 @@ body {
 	/* Changing the background color */
 	background-color: rgb(255, 255, 255);
 }
+/* here h1 is the p type element selector*/
 h1 {
 	/* Changing the font size */
 	font-size: 5em;
@@ -276,6 +370,8 @@ h1 {
 	font-family: 'Courier New', Courier, monospace;
 	/* Changing the font weight */
 	font-weight: normal;
+	/* Aligning text to center */
+	text-align: center;
 }
 ```
 A great practice in classifying the font type is to have multiple fonts. This makes sure that if any OS doesn't support the font that is asked to be rendered another placeholer font will replace it so the styling of the website is not inconsistant.
@@ -283,6 +379,98 @@ A great practice in classifying the font type is to have multiple fonts. This ma
 ### Styling basics 
 - Box model \
 The whole webpage is divided into padding, border and margin with the margin being the differentialtor between the current element and the end of the current element. The Border being the end of the space between padding and margin and the padding is the void between the content and the border.
+
+### Styling individual elements
+With muliple elements requiring different styles, we can use html with css to assign certain id with certain elements to having individual styles.
+
+- Using ID selector
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Styling guide</title>
+</head>
+<style>
+	body {
+	background: #ffffff;
+	}
+	h1 {
+		color: #000000;
+	}
+	#color {
+		color: crimson;
+	}
+</style>
+<body>
+	<h1>This is a document</h1>
+	<p>This is the not coloured paragraph style.</p>
+	<br><br>
+	<p id="color">This is a colouted paragraph</p>
+</body>
+</html>
+```
+
+- Using class selector
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Styling guide</title>
+</head>
+<style>
+	body {
+		background: #ffffff;
+	}
+	h1 {
+		color: #000000;
+	}
+	.color {
+		color: crimson;
+	}
+</style>
+<body>
+	<h1>This is a document</h1>
+	<p>This is the not coloured paragraph style.</p>
+	<br><br>
+	<p class="color">This is a colouted paragraph</p>
+</body>
+</html>
+```
+
+### Generic and non generic selectors in CSS
+Generic selectors in CSS are the normal selectors used in above programs and change all the elements with the given tag, whereas non generic selectors only change the type of file which matches the given id attribute and the type of tag it has.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Styling guide</title>
+</head>
+<style>
+	body {
+	background: #ffffff;
+	}
+	h1 {
+		color: #000000;
+	}
+	/* non generic styles used here */
+	p.color {
+		color: crimson;
+	}
+</style>
+<body>
+	<h1 class="color">This is a document</h1>
+	<p>This is the not coloured paragraph style.</p>
+	<br><br>
+	<p class="color">This is a colouted paragraph</p>
+</body>
+</html>
+```
+### Extras
+1. Where and where to use class and ID in HTML? ID support dynamic attributes that is powered
+2. Class/ID names support spaces but no number in the beginning
+3. Universal selector * can be used to highlight all content
+4. Grouping selection can be initiated with the tag name and a comma in between.
 
 ## Creating a table
 There are three keywords in creating a table\
