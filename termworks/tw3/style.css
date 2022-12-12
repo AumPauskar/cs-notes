@@ -1,0 +1,30 @@
+.newspaper {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-width: 100px;
+	-moz-column-width: 100px;
+	column-width: 100px;
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-gap: 40px;
+	-webkit-column-rule-color: white;
+	-webkit-column-rule-style: solid;
+	-webkit-column-rule-width: 20px;
+	-moz-column-rule-color: white;
+	-moz-column-rule-style: solid;
+	-moz-column-rule-width: 20px;
+	column-rule-color: white;
+	column-rule-style: solid;
+	column-rule-width: 20px;
+	column-fill: auto;
+	height: 400px;
+}
+
+h1 {
+	column-span: all;
+}
+
+#share-button-img {
+
+}
