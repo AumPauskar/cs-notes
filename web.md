@@ -90,50 +90,7 @@ There are two methods of using CSS in HTML 5. One method is to use a seperate CS
 <head>
 	<title>Styling guide</title>
 </head>
-<body>
-	<h1>This is a document</h1>
-</body>
-</html>
-```
-
-- Using HTML and CSS (external way)\
-Contents of HTML document
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="style.css">
-	<title>Styling guide</title>
-</head>
-<body>
-	<h1>This is a document</h1>
-</body>
-</html>
-```
-Contents of CSS document
-```
-body {
-	background: #e71515;
-}
-h1 {
-	color: #ffffff;
-}
-```
-
-- Inline use of stylesheets
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Styling guide</title>
-</head>
-<body style="background: #e71515">
-	<h1 style="color: #ffffff">This is a document</h1>
-</body>
-</html>
-```
-
-- Conflict resoultion in web page \
+<body><!-- <link rel="stylesheet" href="style.css"> -->
 Whenever there are multiple styling arguments in a html document the html always seeks for element level styling in the beginning heading styles as the intermediate amd external styling in the end.
 ### Adding a hyperlink
 A hyperlink is a gateway to another website or can be a local file. A hyperlink can be enclosed withing a string of text, a button or an image. \
