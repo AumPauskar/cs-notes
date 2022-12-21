@@ -466,6 +466,9 @@ Generic selectors in CSS are the normal selectors used in above programs and cha
 </body>
 </html>
 ```
+
+### Z index
+The Z index is used to create layers in a html form. It being similar to the layer function in photoshop, with -1 being the index that is bedind all the other layers and the positive layers neing in the front of all the other layers.
 ### Extras
 1. Where and where to use class and ID in HTML? ID support dynamic attributes that is powered
 2. Class/ID names support spaces but no number in the beginning
