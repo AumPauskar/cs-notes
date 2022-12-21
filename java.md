@@ -839,6 +839,7 @@ Power in regular v8: 400
 Power in F1 v8: 750
 ```
 ### Abstract classes
+Abstract classes are those chasses which contain abstract methods
 
 1. An abstract class must be declared with an abstract keyword.
 2. It can have abstract and non-abstract methods.
@@ -883,9 +884,20 @@ Output
 Power in regular v8: 0
 Power in F1 v8: 750
 ```
+
+#### Abstract methods
+Abstract methods are those methods housed inside the classes which dont have any implementation or we can say "A method declared using the abstract keyword within an abstract class and does not have a definition".
+
+The syntax for abstract methods is as follows:
+```
+abstract return_type method_name( [ argument-list ] );  
+```
+### Interfaces
+Within an abstract class we can still have normal non-abstract methods, with the use of interfaces we can completely remove the need of solid methods
 ## Termworks
 
-1. Termwork 1 - Program on 2D arrays
+1. Termwork 1 -It can be used to achieve loose coupling.
+ Program on 2D arrays
 
 Problem statement: There are 5 students who are enrolled in 3 subjects, find the average of two marks out of three.
 
