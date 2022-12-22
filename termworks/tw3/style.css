@@ -7,7 +7,7 @@ div {
 	animation-duration: 4s;
 }
 
-p {
+p.intext {
 	animation-name: text;
 	animation-duration: 4s;
 	position: relative;
