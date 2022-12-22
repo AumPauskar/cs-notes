@@ -1,5 +1,5 @@
 # Figma notes
-Figma is a free online tool to create UI and UX designs.
+Figma is a free online tool to create UI and UX designs. Notes made by Aum Pauskar USN: 2GI21CS037.
 
 ## Controls
 1. Ctrl + mouse wheel or pinch to zoom in/out
@@ -8,7 +8,7 @@ Figma is a free online tool to create UI and UX designs.
 For beginners learning figma with templates would be much easier than to create it natvely.
 
 ### Installing a template
-There are a lot of templates of figma on the (https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDVIVTdtZW5qM1VubkU4Yjd0eU4xTEFJSm1WQXxBQ3Jtc0trZUkxRGU1MHlGZTZkcnhCdEdCbkZ2Wk5aaXJuTnotY2lTcVVjUXdiN281enhnWlk0THFGb251bnRGNkEtZnBWNVhGWmUxanI0VHZKc0ZMUFlCUmZyM0E5d081N3p6d3BKa0J2eWlfVWtkN3l5SmtXOA&q=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F852455074698003039&v=FTFaQWZBqQ8)[web]. \
+There are a lot of templates of figma on the [web](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDVIVTdtZW5qM1VubkU4Yjd0eU4xTEFJSm1WQXxBQ3Jtc0trZUkxRGU1MHlGZTZkcnhCdEdCbkZ2Wk5aaXJuTnotY2lTcVVjUXdiN281enhnWlk0THFGb251bnRGNkEtZnBWNVhGWmUxanI0VHZKc0ZMUFlCUmZyM0E5d081N3p6d3BKa0J2eWlfVWtkN3l5SmtXOA&q=https%3A%2F%2Fwww.figma.com%2Fcommunity%2Ffile%2F852455074698003039&v=FTFaQWZBqQ8). \
 Steps to install a figma template
 1. Open any figma template link
 2. Click on get a copy

@@ -689,3 +689,31 @@ Buttons make the website dynamic with the use of javascript libraries
 </body>
 </html>
 ```
+
+## Javascript
+scripting lang
+oop object based
+dynamic variables
+
+inline, internal, external
+innerhtml
+
+### A simple Javascript code
+```
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	function showdate(){
+		document.getElementById('demo').innerHTML = Date();
+	}
+</script>
+<h2>My First JavaScript</h2>
+
+<button type="button" onclick="showdate()">Click me</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+```
