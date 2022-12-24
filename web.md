@@ -697,6 +697,9 @@ dynamic variables
 
 inline, internal, external
 innerhtml
+standard in body section
+integer.parseint
+build a calculator
 
 ### A simple Javascript code
 ```
@@ -716,4 +719,101 @@ innerhtml
 
 </body>
 </html> 
+```
+
+### Javascript calculator
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var num1 = prompt('Enter first number: '); num1=num1-0;
+		var num2 = prompt('Enter second number: '); num2=num2-0;
+		function add() {
+			document.getElementById('ans').innerHTML = num1+num2;
+		}
+		function sub() {
+			document.getElementById('ans').innerHTML = num1-num2;
+		}
+		function mul() {
+			document.getElementById('ans').innerHTML = num1*num2;
+		}
+		function div() {
+			document.getElementById('ans').innerHTML = num1/num2;
+		}
+		function clear() {
+			document.getElementById('ans').innerHTML = 'ans';
+		}
+	</script>
+</head>
+<body>
+	<!-- <form>
+		<input type="text" id="theNum1"/>
+		<input type="text" id="theNum2"/>
+	</form> -->
+	<button type="button" onclick="add()">Add numbers</button>
+	<button type="button" onclick="sub()">Subtract numbers</button>
+	<button type="button" onclick="mul()">Multiply numbers</button>
+	<button type="button" onclick="div()">Divide numbers</button>
+	<button type="button" onclick="clear()">Clear numbers</button>
+	<p id="ans">ans</p>
+</body>
+</html>
+```
+
+Taking user inputs
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		var num1, num2;
+		function resolve() {
+			num1 = document.getElementById('theNum1').value;
+			num2 = document.getElementById('theNum2').value;
+			num1=num1-0;
+			num2=num2-0;
+		}
+		function add() {
+			resolve();
+			document.getElementById('ans').innerHTML = num1+num2;
+		}
+		function sub() {
+			resolve();
+			document.getElementById('ans').innerHTML = num1-num2;
+		}
+		function mul() {
+			resolve();
+			document.getElementById('ans').innerHTML = num1*num2;
+		}
+		function div() {
+			resolve();
+			document.getElementById('ans').innerHTML = num1/num2;
+		}
+		function clear() {
+			document.getElementById('ans').innerHTML = 'ans';
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="theNum1"/>
+		<input type="text" id="theNum2"/>
+	</form>
+	<button type="button" onclick="add()">Add numbers</button>
+	<button type="button" onclick="sub()">Subtract numbers</button>
+	<button type="button" onclick="mul()">Multiply numbers</button>
+	<button type="button" onclick="div()">Divide numbers</button>
+	<button type="button" onclick="clear()">Clear numbers</button>
+	<p id="ans">ans</p>
+</body>
+</html>
 ```
