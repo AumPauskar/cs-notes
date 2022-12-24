@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+	<!-- importing the javascript app -->
+	<script src="app.js"></script>
+	<p id="display">0</p>
+	<table>
+		<tr>
+			<td><button id="opButton+" type="button" disabled onclick="operation('+')">+</button></td>
+			<td><button id="opButton-" type="button" disabled onclick="operation('-')">-</button></td>
+			<td><button id="opButtonx" type="button" disabled onclick="operation('x')">x</button></td>
+			<td><button id="opButton÷" type="button" disabled onclick="operation('÷')">÷</button></td>
+		</tr>
+		<tr>
+			<td><button id="answer" type="button" disabled onclick="ans()">=</button></td>
+			<td><button id="numButton7" type="button" onclick="onPressNum('7')">7</button></td>
+			<td><button id="numButton8" type="button" onclick="onPressNum('8')">8</button></td>
+			<td><button id="numButton9" type="button" onclick="onPressNum('9')">9</button></td>
+		</tr>
+		<tr>
+			<td><button id="acButton" type="button" onclick="allClear()">AC</button></td>
+			<td><button id="numButton4" type="button" onclick="onPressNum('4')">4</button></td>
+			<td><button id="numButton5" type="button" onclick="onPressNum('5')">5</button></td>
+			<td><button id="numButton6" type="button" onclick="onPressNum('6')">6</button></td>
+		</tr>
+			<td><button id="numButton0" type="button" disabled onclick="onPressNum('0')">0</button></td>
+			<td><button id="numButton1" type="button" onclick="onPressNum('1')">1</button></td>
+			<td><button id="numButton2" type="button" onclick="onPressNum('2')">2</button></td>
+			<td><button id="numButton3" type="button" onclick="onPressNum('3')">3</button></td>
+		</tr>
+	</table>
+</body>
+</html>
