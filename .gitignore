@@ -2,3 +2,4 @@ test/
 programs/a.out
 .vscode/
 **.out
+**.pdf
