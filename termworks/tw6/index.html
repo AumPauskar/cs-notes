@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS validaiton</title>
+</head>
+<body>
+	<script>
+		function formValidation() {
+			let formVar = document.getElementById("myForm").value;
+			if (formVar == '') {
+				alert('Empty field');
+			}
+		}
+	</script>
+
+	<input id="myForm">
+	<button type="button" onclick="formValidation()">Submit</button>
+	<p id="theform">demo</p>
+</body>
+</html>

@@ -32,6 +32,10 @@ function ans() {
 		default:
 			break;
 	}
+	if (res == 69) {
+		window.open("https://youtu.be/dQw4w9WgXcQ");
+	}
+	
 	document.getElementById('display').innerHTML = '= ' + res;
 	document.getElementById("opButton+").disabled = true;
 	document.getElementById("opButton-").disabled = true;
