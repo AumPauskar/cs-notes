@@ -1,6 +1,7 @@
 # Java tutorial
 Java is a cross platform compiled language that uses jvm (java virtual machine) that can be used in any machine no matter the hardware or software, provided the machine supports jvm
-
+## FYI
+1. The object class is the root of all classes
 ## Hello world
 Code
 ```
@@ -894,6 +895,17 @@ abstract return_type method_name( [ argument-list ] );
 ```
 ### Interfaces
 Within an abstract class we can still have normal non-abstract methods, with the use of interfaces we can completely remove the need of solid methods
+
+### Exception handling
+Managing execptions or code errors in java can be handled in a more customizable way with the use of exception handling
+
+- Components of try catch
+1. try - asks the code to execute and argument and hope it doesn't spit out an error
+2. catch - handles the error in a user defined way
+3. finally - the final block in the code which gets executed no matter what
+
+- Throw
+The try catch is a system defined error handling snippet, with the throw keyword the user can customize the exception handling without an external library. 
 ## Termworks
 
 1. Termwork 1 -It can be used to achieve loose coupling.
