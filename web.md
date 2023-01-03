@@ -691,15 +691,19 @@ Buttons make the website dynamic with the use of javascript libraries
 ```
 
 ## Javascript
-scripting lang
-oop object based
-dynamic variables
+Javascript is a scripting language rather than a conventional programming language. The program is also object based insted of object oriented programming, so creation of objects can be implemented however not necessary. It also features dynamic variables that means a variable can compute itself, similar to many other common languages `var1 = var1 + 1`.
 
-inline, internal, external
-innerhtml
-standard in body section
-integer.parseint
-build a calculator
+### Implementing Javascript in the code
+Implementation of javascript is very similar to implementation of CSS in a HTML webpage. There are 3 methods of implementing of the javascript code
+1. inline - the script is embedded in the html code
+2. internal - the script comes before any html file
+3. external - a dedicated javascript file is made
+
+### Dynamic html code via JavaScript
+The innerhtml code can be used to gater or modify html code, the innerhtml code works with an html tag with a certain allocated `id` and when the id matches the property of that tag can be changed with the innerhtml tag.
+
+### Extras
+1. Integer parseint - Changes the datatype of the given string to the first given integer
 
 ### A simple Javascript code
 ```
