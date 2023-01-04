@@ -2,6 +2,7 @@
 Java is a cross platform compiled language that uses jvm (java virtual machine) that can be used in any machine no matter the hardware or software, provided the machine supports jvm
 ## FYI
 1. The object class is the root of all classes
+2. Data can be gatered with the scanner method in the java library but cannot cater charecter type data with the standard library. Those can be gathered by sc = next().charat(0)
 ## Hello world
 Code
 ```
@@ -702,7 +703,8 @@ Output
 ```
 
 ### Inheritance
-Inheritance in programming languages refers to getting all the properties of the parent function plus some more extras
+Inheritance in programming languages refers to getting all the properties of the parent function plus some more extras.
+Note: Multiple inheritance in not supported in Java, however is supported using interfaces.
 ```
 package test;
 
@@ -905,7 +907,34 @@ Managing execptions or code errors in java can be handled in a more customizable
 3. finally - the final block in the code which gets executed no matter what
 
 - Throw
-The try catch is a system defined error handling snippet, with the throw keyword the user can customize the exception handling without an external library. 
+The try catch is a system defined error handling snippet, with the throw keyword the user can customize the exception handling without an external library. \
+The throw exception works with tandem with the try, catch, finally.
+
+An example of try catch can be found below
+```
+package test;
+import java.util.Scanner;
+public class jarjar {
+
+	public static void main(String[] args) {
+		Scanner scanInput = new Scanner(System.in);
+		double a, b, ans;
+		try {
+			System.out.print("Enter divident: ");
+			a = scanInput.nextInt();
+			System.out.print("Enter divisor: ");
+			b = scanInput.nextInt();
+			scanInput.close();
+			ans = a/b;
+			System.out.println("Answer: " + ans);
+		} catch (Exception e) {
+			System.out.println("Invalid input");
+		}
+	}
+}
+```
+
+This can be further be changed into a custom error with the use of `throw` keyword. The syntax can be simplified into being as `throw new error` as seen in termwork 8.
 ## Termworks
 
 1. Termwork 1 -It can be used to achieve loose coupling.
@@ -983,4 +1012,47 @@ Average: 9
 For student5
 Marks: 18
 Average: 9
+```
+
+**temproary code**
+```
+class A {
+    int i, j;
+    void showij() {
+        System.out.println("i and j: " + i + " " + j);
+    }
+}
+// Create a subclass by extending class A. 
+class B extends A {
+    int k;
+    void showk() { 
+        System.out.println("k: " + k);
+    }
+    void sum() { 
+        System.out.println("i+j+k: " + (i+j+k));
+    }
+}
+
+public class Main {
+    public static void main(String args[]) { 
+        A superOb = new A();
+        B subOb = new B();
+        // The superclass may be used by itself. 
+        superOb.i = 10;
+        superOb.j = 20; 
+        System.out.println("Contents of  superOb: "); 
+        superOb.showij(); 
+        System.out.println();
+        /* The subclass has access to all public members of  its  superclass. */
+        subOb.i = 7;
+        subOb.j = 8;
+        subOb.k = 9;
+        System.out.println("Contents	of	subOb: "); 
+        subOb.showij();
+        subOb.showk(); 
+        System.out.println();
+        System.out.println("Sum of i, j and k in subOb:"); 
+        subOb.sum();
+    }
+}
 ```
