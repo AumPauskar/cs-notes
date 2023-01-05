@@ -821,3 +821,24 @@ Taking user inputs
 </body>
 </html>
 ```
+
+### API'S
+API stands for Application Programming Interface. It acts as a bridge between the backend applocation and the frontend web application.
+
+There are two types of API's
+1. Browser API - A browser acts as an extension to the browsers current functionality
+2. Server API - A server API does the same for the server
+
+Some popular API's 
+1. Geolocation API - Gives the precise location of the user
+2. Validation API - Validates the input given by the user
+
+Third party API's
+Third party API's are the API's built by other users and not the browser, these API's typically need an API key to ensure the use of proper accounts and proper services.
+
+- Web history API
+1. Back - May navigate to any page predessing it
+2. Forward - May navigate to any page sucessiding it
+3. Go - Will navigate to any given page in the history
+
+javascript fetch api
