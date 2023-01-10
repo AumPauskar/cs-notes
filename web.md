@@ -842,3 +842,79 @@ Third party API's are the API's built by other users and not the browser, these 
 3. Go - Will navigate to any given page in the history
 
 javascript fetch api
+
+## Using a web server
+A web server can used to execute fetch api protocols, XAMPP, WAMPP can be used if you are on windows or Apache can be used if you are on linux and all the other requirements are also installed.
+
+- Installing Apache as a web server on linux \
+Open your linux terminal and execute the following commands
+1. Updating the system
+```
+sudo apt update
+sudo apt upgrade
+```
+2. Installing php
+```
+sudo apt install php
+```
+3. Installing apache
+```
+sudo apt install apache2
+```
+4. Installing mariadb
+```
+# getting the client
+sudo apt install mariadb-server mariadb-client -y
+
+# checking the gpg keys
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+
+# adding the gpg keys
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] https://mariadb.mirror.liquidtelecom.com/repo/10.6/ubuntu focal main'
+
+# installign the client
+sudo apt update && sudo apt install -y mariadb-server mariadb-client
+```
+If mariadb is installed then it can be checked by
+```
+mariadb --version
+```
+Enabling mariadb
+```
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+```
+Configuring mariadb
+```
+sudo mysql_secure_installation
+```
+Adding a password \
+Replace _enter_your_password_ by your own custom password
+```
+sudo mariadb -u root -p
+CREATE USER 'admin_user'@'localhost' IDENTIFIED BY 'enter_your_password';
+```
+
+- Acessing Apache \
+Enter this on the terminal \
+Starting the server
+```
+sudo service apache2 start
+```
+File location \
+All the files in apache are stored in this specific location if you want to add or change the webpage you can go to the following location
+```
+cd /var/www/html
+```
+
+- Opening the server \
+Enter this in the terminal
+```
+hostname -i
+```
+Now copy the ip and repace it in _enter_the_ip_
+```
+http://enter_the_ip
+```
+
+note: hostgator to host servers
