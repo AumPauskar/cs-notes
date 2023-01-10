@@ -91,3 +91,41 @@ void disp(NODE *head)
         head=head->next;
     }
 }
+
+/* IO
+ * ➜  programs git:(ds) ✗ gcc tw4.c && ./a.out
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 1
+ * 
+ * Enter item to add to list: 1
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 5
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 1
+ * 
+ * Enter item to add to list: 6
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 2
+ * 
+ * The list items are: 1    6    
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 1
+ * 
+ * Enter item to add to list: 9
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 1
+ * 
+ * Enter item to add to list: 4
+ * 
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 2
+ * 
+ * The list items are: 1    4    6    9    
+ * 1: Add item    2: Display   3: exit
+ * Enter your option: 3
+*/

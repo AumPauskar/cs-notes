@@ -69,3 +69,18 @@ int main()
 
     return 0;
 }
+
+/* IO
+ * ➜  programs git:(ds) ✗ gcc tw2.c && ./a.out
+ * Output 1
+ * Enter the exp: 4-6+7*7
+ * 46-77*
+ * 
+ * Output 2
+ * Enter the exp: 7-4+3^5
+ * 74-35^
+ * 
+ * Output 3
+ * Enter the exp: 3+5+4
+ * 35+4+
+*/

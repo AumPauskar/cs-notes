@@ -124,3 +124,18 @@ int main() {
 	printf("Inorder traversal: ");
 	inorder(root);
 }
+
+/* IO - WORK IN PROGRESS
+ * ➜  programs git:(ds) ✗ gcc tw5.c && ./a.out
+ * Enter a node 4
+ * Enter a node 5
+ * Enter a node 7
+ * Enter a node 4
+ * Enter a node 2
+ * Enter a node 9
+ * Enter a node 4
+ * Enter a node 8
+ * Inorder traversal: 2 -> 4 -> 4 -> 4 -> 5 -> 7 -> 8 -> 9 -> 
+ * After deleting 10
+ * Inorder traversal: 2 -> 4 -> 4 -> 4 -> 5 -> 7 -> 8 -> 9 ->
+*/
