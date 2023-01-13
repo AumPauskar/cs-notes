@@ -918,3 +918,333 @@ http://enter_the_ip
 ```
 
 note: hostgator to host servers
+
+## Styling using external libraries
+
+### Bootstrap
+Bootstrap is a external css library which can be used to stylze the html webpage. It also allows the user to make responsive pages in order for the app to work across multiple devices with different aspect ratios and different screen sizes.
+
+- Versions of bootstrap \
+Currently bootstrap 3 is considered as legacy but is also the most stable and bootstrap 5 is the most recent with bootstrap 4 being the awkard middle child. The previous versions have been depricated.
+
+- Container \
+A container is a housing of different in the html file using bootstrap. There are two kinds of containters
+1. Container (standard): A housing of diffeent elements that occupies fixed space
+2. Fluid container: A housing of different elements that occupies the full screen
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This part is inside a .container class.</p>
+  <p>The .container class provides a responsive fixed width container.</p>
+  <p>Resize the browser window to see that the container width will change at different breakpoints.</p>
+</div>
+
+</body>
+</html>
+```
+**Note** that the link to other web pages can also be stored locally and can be linked like just any others web pages.
+
+- Padding \
+The padding can be changes with the `p` tag. For example here we are changing the top pading by 5 units
+```
+<div class="container pt-5"></div>
+```
+Note that this should be used in conjunction to the previous code with the containter line to be tweaked. \
+The `pt` stands for _padding-top_ it can be changed `pb`, `pl`, `pr` to change other attributes. \
+Similarly the `m` keyword stands for margins, and can be used as a compound attribute.
+
+Example on padding and margins
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  
+<div class="container p-5 my-5 border">
+  <h1>My First Bootstrap Page</h1>
+  <p>This container has a border and some extra padding and margins.</p>
+</div>
+
+<div class="container p-5 my-5 bg-black text-white">
+  <h1>My First Bootstrap Page</h1>
+  <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+</div>
+
+<div class="container p-5 my-5 bg-primary text-white">
+  <h1>My First Bootstrap Page</h1>
+  <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+</div>
+
+</body>
+</html>
+```
+
+- Containter sizes
+The `.container-sm|md|lg|xl` classes to determine when the container should be responsive.
+The max-width of the container will change on different screen sizes/viewports and can be adapted to any screen.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  
+<div class="container pt-3">
+  <h1>Responsive Containers</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="container-sm border">.container-sm</div>
+<div class="container-md mt-3 border">.container-md</div>
+<div class="container-lg mt-3 border">.container-lg</div>
+<div class="container-xl mt-3 border">.container-xl</div>
+<div class="container-xxl mt-3 border">.container-xxl</div>
+
+</body>
+</html>
+```
+
+- Responsive columns
+Tables are responsive but are unable to reform when the aspect ratio i changed. With bootstrap and responsive colums the columns automatically reform when the device width is changed.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  
+<div class="container-fluid mt-3">
+  <h1>Responsive Columns</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+  <div class="row">
+    <div class="col-sm-3 p-3 bg-primary text-white">.col</div>
+    <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+    <div class="col-sm-3 p-3 bg-primary text-white">.col</div>
+    <div class="col-sm-3 p-3 bg-dark text-white">.col</div>
+  </div>
+</div>
+
+</body>
+</html>
+```
+
+- Displaying stuff in bootstrap
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <p>The font-size of each Bootstrap heading depends on the screen size. Try to resize the browser window to see the effect.</p>
+  <h1 class="display-1 >h1 Bootstrap heading</h1>
+  <h2 class="display-2 >h2 Bootstrap heading</h2>
+  <h3 class="display-3 >h3 Bootstrap heading</h3>
+  <h4 class="display-4 >h4 Bootstrap heading</h4>
+  <h5 class="display-5 >h5 Bootstrap heading</h5>
+  <h6 class="display-6 >h6 Bootstrap heading</h6>
+</div>
+
+</body>
+</html>
+```
+
+This can be changed to smaller font like this
+```
+ <h1>h1 heading <small>secondary text</small></h1>
+ <h2>h2 heading <small>secondary text</small></h2>
+ <h3>h3 heading <small>secondary text</small></h3>
+ <h4>h4 heading <small>secondary text</small></h4>
+ <h5>h5 heading <small>secondary text</small></h5>
+ <h6>h6 heading <small>secondary text</small></h6>
+```
+
+- Text colours \
+Bootstrap has its own colours to specify \
+These are
+1. .text-muted
+2. .text-primary
+3. .text-success
+4. .text-info
+5. .text-warning
+6. .text-danger
+7. .text-secondary
+8. .text-white
+9. .text-dark
+10. .text-body
+11. .text-light:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Contextual Colors</h2>
+  <p>Use the contextual classes to provide "meaning through colors":</p>
+  <p class="text-muted">This text is muted.</p>
+  <p class="text-primary">This text is important.</p>
+  <p class="text-success">This text indicates success.</p>
+  <p class="text-info">This text represents some information.</p>
+  <p class="text-warning">This text represents a warning.</p>
+  <p class="text-danger">This text represents danger.</p>
+  <p class="text-secondary">Secondary text.</p>
+  <p class="text-dark">This text is dark grey.</p>
+  <p class="text-body">Default body color (often black).</p>
+  <p class="text-light">This text is light grey (on white background).</p>
+  <p class="text-white">This text is white (on white background).</p>
+</div>
+
+</body>
+</html>
+```
+
+- Using contrasting colors \
+Contrasting colors make the webpage be easy to read and is builtin inside bootstrap.
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Background Color with Contrasting Text Color</h2>
+  <p class="text-bg-primary">This text is important.</p>
+  <p class="text-bg-success">This text indicates success.</p>
+  <p class="text-bg-info">This text represents some information.</p>
+  <p class="text-bg-warning">This text represents a warning.</p>
+  <p class="text-bg-danger">This text represents danger.</p>
+  <p class="text-bg-secondary">Secondary background color.</p>
+  <p class="text-bg-dark">Dark grey background color.</p>
+  <p class="text-bg-light">Light grey background color.</p>
+</div>
+
+</body>
+</html>
+```
+
+- Example of striped tables in bootstrap
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+```
+
+- Paginations \
+Paginations are splitting a page into multiple areas. 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Pagination</h2>
+  <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each li element and a .page-link class to each link inside li:</p>                  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+```
