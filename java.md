@@ -935,3 +935,28 @@ public class jarjar {
 ```
 
 This can be further be changed into a custom error with the use of `throw` keyword. The syntax can be simplified into being as `throw new error` as seen in termwork 8.
+
+packages
+In Java, a package is a way to organize and structure code. A package is a collection of related classes, interfaces, and other resources that are bundled together. Packages are used to group similar classes and interfaces, and to provide a unique namespace for them. This helps to prevent naming conflicts and makes it easier to maintain and reuse code.
+
+Packages in Java are created using the package keyword, followed by the package name. For example:
+```
+package com.example.mypackage;
+```
+This creates a package named mypackage in the com.example namespace.
+
+To use a class or interface from a package, you must import it using the import keyword. For example:
+```
+import java.util.List;
+```
+This imports the List interface from the java.util package.
+
+It's also possible to use the * wildcard to import all the classes and interfaces from a package. For example:
+```
+import java.util.*;
+```
+This imports all the classes and interfaces from the java.util package.
+
+Java has a set of built-in packages, known as the Java API, which provide a wide range of functionality for common tasks such as working with strings, lists, and dates. Additionally, developers can create their own custom packages.
+
+It's a good practice to group related classes and interfaces in packages, and to use appropriate package names that reflect the functionality of the classes and interfaces. This makes it easy to understand the purpose of the package and how to use the classes and interfaces it contains.
